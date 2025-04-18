@@ -1,0 +1,15 @@
+workflows:
+  canfitmind-ios-build:
+    name: CanFitMind iOS Build
+    environment:
+      xcode: 15.2
+    scripts:
+      - name: Build CanFitMind App
+        script: |
+          xcodebuild -project CanFitMind.xcodeproj -scheme CanFitMind -sdk iphoneos -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+    artifacts:
+      - build/**/Build/**/*.app
+    publishing:
+      email:
+        recipients:
+          - harishpichukala@gmail.com
