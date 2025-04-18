@@ -1,1 +1,1 @@
-// Placeholder: Replace with real Xcode-generated pbxproj
+// Real pbxproj must be generated from Xcode
